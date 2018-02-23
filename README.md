@@ -35,9 +35,9 @@ DOCUMENTATION</br>
 MEDIA</br>
 
 Where 
-    FILENAME is the name of the currently browsed code file
-    CODE is a string matching the code to be documented
-    DOCUMENTATION is a string that will be displayed in a tooltip
-    MEDIA is a html rerference (local or external) to media (optional*)
+    FILENAME is the name of the currently browsed code file.
+    CODE is a string matching the code to be documented.
+    DOCUMENTATION is a string that will be displayed in a tooltip.
+    MEDIA is a html rerference (local or external) to media (optional).
 
 If no MEDIA html reference is to be provided, it is necessary to include a /# symbol in place of the html reference.
