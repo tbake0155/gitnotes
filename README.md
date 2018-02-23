@@ -8,7 +8,7 @@ Footnote / reference type extension for GitHub. Developed as part of the HU6 cha
 * **Katrine Gausin** - *Contributor* - [kgausin](https://github.com/kgausin)
 * **Timothy Baker** - *Contributor* - [tbake0155](https://github.com/tbake0155)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/tbake0155/gitnotes/contributors) who participated in this project.
 
 ## License
 
