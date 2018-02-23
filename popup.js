@@ -43,6 +43,8 @@ for(var i = 0;i < lines.length;i++)
            var re = new RegExp(key, "gi");
            var injected = "<a href=\"https://www.google.com\">" + key + "</a>";
 
+           console.log(re);
+
            mod_body = body.replace(re, injected);
         }
     }
