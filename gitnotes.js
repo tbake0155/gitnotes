@@ -27,25 +27,46 @@ var lines = attributes.split('\n');
 
 for(var i = 0;i < lines.length;i++)
 {
-    console.log(i);
+    //console.log(i);
     if(lines[i] == "#ENTRY#")
     {
        if(lines[i+1] == fileName)
        {
            var key = lines[i+2]; // code
            var val = lines[i+3]; // documentation
-           var ref = lines[i+4]; // media
+		   var img = lines[i+4]; // images
+           var ref = lines[i+5]; // media
            i++;i++;i++;i++;
-
-           if(ref == "#") // developer did not provide media
-           {
-                ref = currentURL;
-           }
     
            var exact_key = "\\b" + key + "\\b";
 
+		   if(ref=="#"){  //developer did not develop media
+			   ref = currentURL;
+		   }
+		   
+		  
+		   
+		   
+		   if(img == "#") // for images
+           {
+			    //ref = "https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678110-sign-info-128.png";
+               injected = "<a class=\"tooltip\" href=\"" + ref + "\">" + key + "<span>" +  val + "</span></a>";
+			   console.log(ref);
+           }else{
+			   console.log(ref);
+			   injected = "<a class=\"tooltip\"  href=\"" + ref + "\">" + key + "<span><img src=" + img + ">" + val + "</span></a>";
+			   
+			   //injected = "<a class=\"tooltip\" href=\"\">" + key + "<span><img src=\"" + ref + "\">" + val + "</span></a>";
+		   }
+		   //ref = "https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678110-sign-info-128.png";
+		   
+		   
+		   //injected = "<a class=\"tooltip\" href=\"\">" + key + "<span><img src=" + ref + ">" + val + "</span></a>";
+		   //console.log(injected);
+		   
+		   
+		   
            var re = new RegExp(exact_key, "g");
-           var injected = "<div class=\"tooltip\"><a href=\""+ ref +"\">" + key + "</a><span class=\"tooltiptext\">" + val + "</span></div>";
            mod_body = mod_body.replace(re, injected);
 
 
