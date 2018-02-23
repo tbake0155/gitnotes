@@ -25,10 +25,9 @@ if (request.status === 200) {
 
 var lines = attributes.split('\n');
 
-console.log(lines);
-
 for(var i = 0;i < lines.length;i++)
 {
+    console.log(i);
     if(lines[i] == "#ENTRY#")
     {
        if(lines[i+1] == fileName)
