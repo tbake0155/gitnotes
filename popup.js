@@ -19,11 +19,7 @@ request.open('GET', attributes_file, false);  // `false` makes the request synch
 request.send(null);
 
 if (request.status === 200) {
-  attributes = request.responseText;  
-}
-
-if (request.status === 404) {
-  attributes = request.responseText;  
+  attributes = request.responseText;  // wait for the file to load 
 }
 
 var mod_body = body;
@@ -41,17 +37,13 @@ for(var i = 0;i < lines.length;i++)
            i++;i++;i++;
 
            var re = new RegExp(key, "gi");
-           var injected = "<a href=\"https://www.google.com\">" + key + "</a>";
+           var injected = "<a href=\"#\">" + key + "</a>";
 
            console.log(re);
-
-           mod_body = body.replace(re, injected);
+           mod_body = mod_body.replace(re, injected);
         }
     }
 }
-
-console.log(body);
-console.log(mod_body);
 
 doc = doc.replace(body, mod_body);
 document.body.innerHTML = doc;
