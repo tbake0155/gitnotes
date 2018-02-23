@@ -18,6 +18,8 @@ This project is licensed under the GNU GENERAL PUBLIC LICENSE V3 License - see t
 
 This project is a Chrome browser extension that allows a user to add comments to a github project without cluttering the code with inline comments.
 
+## USE
+
 In order to use the plug-in a user must create a gitnotes folder in the chosen repository.  The folder must be named as such ".gitnotes".  Inside the hidden gitnotes folder a user must include a text file named "notes".  The notes file is a text file in UTF8 format.  Entries in the notes file should be entered one at a time as follows:
 
 #ENTRY#  
