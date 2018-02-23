@@ -28,7 +28,7 @@ This project is a Chrome browser extension that allows a user to add comments to
 
 In order to use the plug-in a user must create an attributes file in the root of the repository for their project.   The attributes file should be named "gitnotes.json" and is a hidden file.  The file is a text file in UTF8 format.  Entries in the attributes file should be entered one at a time as follows:
 
-/#ENTRY#  
+#ENTRY#  
 FILENAME
 CODE
 DOCUMENTATION
