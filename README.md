@@ -34,6 +34,6 @@ Where
     DOCUMENTATION is a string that will be displayed in a tooltip.
     MEDIA is a local or external reference to media (optional).
 
-If no MEDIA html reference is to be provided, it is necessary to include a /# symbol in place of the html reference.  Users may add images or html pages to their gitnotes folder and then link those files raw pages from github to allow a user to view media hosted in the gitnotes folder. 
+If no MEDIA html reference is to be provided, it is necessary to include a /# symbol in place of the html reference.  Users may add images or html pages to their gitnotes folder and then link those files raw pages from github to allow a user to view media hosted in the gitnotes folder.
 
 NOTE: The #ENTRY# line must exist as the first line for each entry!  There are no spacing requirements between entries but each entry will always exactly take up 5 lines.

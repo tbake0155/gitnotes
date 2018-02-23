@@ -41,10 +41,13 @@ for(var i = 0;i < lines.length;i++)
            {
                 ref = currentURL;
            }
+    
+           var exact_key = "\\b" + key + "\\b";
 
-           var re = new RegExp(key, "gi");
+           var re = new RegExp(exact_key, "g");
            var injected = "<div class=\"tooltip\"><a href=\""+ ref +"\">" + key + "</a><span class=\"tooltiptext\">" + val + "</span></div>";
            mod_body = mod_body.replace(re, injected);
+           console.log(re);
         }
     }
 }
