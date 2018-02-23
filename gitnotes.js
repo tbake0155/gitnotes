@@ -1,7 +1,7 @@
 var currentURL = window.location.href;
 var rawURL = currentURL.replace("https://github.com/", "https://raw.githubusercontent.com/");
 rawURL = rawURL.substring(0, rawURL.indexOf('/blob/'));
-var attributes_file = rawURL + "/master/.attributes";
+var attributes_file = rawURL + "/master/.gitnotes/notes";
 
 var doc = document.body.innerHTML;
 var tbody_beg = "<tbody>"; // the  code exists inside these tbody tags
@@ -22,32 +22,6 @@ if (request.status === 200) {
   attributes = request.responseText;  // wait for the file to load 
 }
 
-body = body + "<style>
-.tooltip {
-    position: relative;
-    display: inline-block;
-    border-bottom: 1px dotted black;
-}
-
-.tooltip .tooltiptext {
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-
-    /* Position the tooltip */
-    position: absolute;
-    z-index: 1;
-}
-
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-}
-</style>"
-
 var mod_body = body;
 var lines = attributes.split('\n');
 
@@ -63,7 +37,7 @@ for(var i = 0;i < lines.length;i++)
            i++;i++;i++;
 
            var re = new RegExp(key, "gi");
-           var injected = "<div class=\"gitnote\" <a href=\"#\">" + key + "</a></div>";//
+           var injected = "<div class=\"tooltip\"><a href=\".gitnotes/"+key+"\">" + key + "</a><span class=\"tooltiptext\">" + val + "</span></div>";
 
            mod_body = mod_body.replace(re, injected);
         }
