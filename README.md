@@ -38,6 +38,8 @@ Where
     FILENAME is the name of the currently browsed code file.
     CODE is a string matching the code to be documented.
     DOCUMENTATION is a string that will be displayed in a tooltip.
-    MEDIA is a html rerference (local or external) to media (optional).
+    MEDIA is a local or external reference to media (optional).
 
 If no MEDIA html reference is to be provided, it is necessary to include a /# symbol in place of the html reference.
+
+NOTE: The #ENTRY# line must exist as the first line for each entry!  There are no spacing requirements between entries but each entry will always exactly take up 5 lines.
