@@ -3,17 +3,6 @@ var rawURL = currentURL.replace("https://github.com/", "https://raw.githubuserco
 rawURL = rawURL.substring(0, rawURL.indexOf('/blob/'));
 var attributes_file = rawURL + "/master/.attributes";
 
-//console.log(attributes_file);
-
-var attributes = "";
-var client = new XMLHttpRequest();
-client.open('GET', attributes_file);
-client.onreadystatechange = function() {
-   alert(client.responseText);
-   attributes = client.responseText; 
-}
-client.send();
-
 var doc = document.body.innerHTML;
 var tbody_beg = "<tbody>"; // the  code exists inside these tbody tags
 var tbody_end = "</tbody>";
@@ -24,6 +13,11 @@ var body = doc.substring(cut_beginning, cut_ending);
 var fileName = currentURL.substring(currentURL.lastIndexOf('/'));
 fileName = fileName.replace("/",""); // we only the attributes for this file
 
+var attributes = "";
+var client = new XMLHttpRequest();
+client.open('GET', attributes_file);
+client.onreadystatechange = function() {
+   attributes = client.responseText; 
 var lines = attributes.split('\n');
 for(var i = 0;i < lines.length;i++){
     //code here using lines[i] which will give you each line
@@ -45,5 +39,11 @@ for(var i = 0;i < lines.length;i++){
     
 doc = doc.replace(body, mod_body);
 document.body.innerHTML = doc;
+}
+client.send();
+
+
+
+
 
 
