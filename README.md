@@ -33,7 +33,7 @@ Where
     FILENAME is the name of the currently browsed code file.
     CODE is a string matching the code to be documented.
     DOCUMENTATION is a string that will be displayed in a tooltip.
-    MEDIA is a external link to an image.
+    MEDIA is a external or internal link (RAW) to an image.
     REFERENCE is a local or external reference to media (optional).
     
     
