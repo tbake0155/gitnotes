@@ -19,10 +19,14 @@ request.open('GET', attributes_file, false);  // `false` makes the request synch
 request.send(null);
 
 if (request.status === 200) {
-  attributes = request.responseText;
-  
+  attributes = request.responseText;  
 }
 
+if (request.status === 404) {
+  attributes = request.responseText;  
+}
+
+var mod_body = body;
 var lines = attributes.split('\n');
 
 for(var i = 0;i < lines.length;i++)
@@ -34,17 +38,19 @@ for(var i = 0;i < lines.length;i++)
        {
            var key = lines[i+2];
            var val = lines[i+3];
+           i++;i++;i++;
 
            var re = new RegExp(key, "gi");
            var injected = "<a href=\"https://www.google.com\">" + key + "</a>";
 
-           var mod_body = body.replace(re, injected);
-           console.log(re);
-           console.log(injected);
+           mod_body = body.replace(re, injected);
         }
     }
 }
-   
+
+console.log(body);
+console.log(mod_body);
+
 doc = doc.replace(body, mod_body);
 document.body.innerHTML = doc;
 

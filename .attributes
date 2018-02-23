@@ -1,10 +1,10 @@
 #ENTRY#
 example.py
-def printer(text)	
+printer	
 this function prints a text string that is passed as the parameter 'text'
 
 #ENTRY#
 example.py
-def main()
+main
 this function is called when the program is executed
 
