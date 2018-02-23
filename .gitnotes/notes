@@ -3,10 +3,12 @@ example.py
 printer
 Test
 https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678110-sign-info-128.png
+#
 
 #ENTRY#
 example.py
 main
 this function is called when the program is executed
+#
 #
 
