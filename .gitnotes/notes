@@ -2,9 +2,11 @@
 example.py
 printer
 this function prints a text string that is passed as the parameter 'text'
+#
 
 #ENTRY#
 example.py
 main
 this function is called when the program is executed
+#
 

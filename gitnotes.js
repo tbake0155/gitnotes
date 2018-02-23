@@ -32,13 +32,18 @@ for(var i = 0;i < lines.length;i++)
     {
        if(lines[i+1] == fileName)
        {
-           var key = lines[i+2];
-           var val = lines[i+3];
-           i++;i++;i++;
+           var key = lines[i+2]; // code
+           var val = lines[i+3]; // documentation
+           var ref = lines[i+4]; // media
+           i++;i++;i++;i++;
+
+           if(ref == "#")
+           {
+                ref = ".";
+           }
 
            var re = new RegExp(key, "gi");
-           var injected = "<div class=\"tooltip\"><a href=\".gitnotes/"+key+"\">" + key + "</a><span class=\"tooltiptext\">" + val + "</span></div>";
-
+           var injected = "<div class=\"tooltip\"><a href=\".gitnotes/"+ref+"\">" + key + "</a><span class=\"tooltiptext\">" + val + "</span></div>";
            mod_body = mod_body.replace(re, injected);
         }
     }
