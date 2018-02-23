@@ -1,6 +1,6 @@
 #ENTRY#
 example.py
-printer	
+printer
 this function prints a text string that is passed as the parameter 'text'
 
 #ENTRY#

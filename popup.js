@@ -37,7 +37,7 @@ for(var i = 0;i < lines.length;i++)
            i++;i++;i++;
 
            var re = new RegExp(key, "gi");
-           var injected = "<a href=\"#\">" + key + "</a>";
+           var injected = "<a href=\"www.google.com\">" + key + "</a>";
 
            console.log(re);
            mod_body = mod_body.replace(re, injected);
