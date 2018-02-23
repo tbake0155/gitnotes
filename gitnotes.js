@@ -37,7 +37,7 @@ for(var i = 0;i < lines.length;i++)
            var ref = lines[i+4]; // media
            i++;i++;i++;i++;
 
-           if(ref == "#")
+           if(ref == "#") // developer did not provide media
            {
                 ref = currentURL;
            }
