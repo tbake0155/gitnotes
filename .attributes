@@ -8,3 +8,8 @@ this function prints a text string that is passed as the parameter 'text'
 example.py	
 def main()	
 this function is called when the program is executed
+
+#ENTRY#
+example.py	
+def main()	
+this function is called when the program is executed
