@@ -45,6 +45,8 @@ for(var i = 0;i < lines.length;i++)
            var re = new RegExp(key, "gi");
            //var injected = "<div class=\"tooltip\"><a href=\""+ ref +"\">" + key + "</a><span class=\"tooltiptext\">" + val + "</span></div>";
 		   var injected = "<div class=\"tooltip\"><a href=\""+ ref +"\">" + key + "</a><span class=\"tooltipTop\">" + val + "</span></div>";
+		   
+		   //var buttoninjected = "<div class=\"tooltip\"><a href=\""+ ref +"\">" + key + "</a><span class=\"tooltiptext\">" + val + "</span></div>";
            mod_body = mod_body.replace(re, injected);
         }
     }

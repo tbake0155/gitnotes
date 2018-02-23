@@ -18,6 +18,7 @@
 	bottom:100%;
 	left:50%;
 	margin-Left: -60px;
+	
 	/*make fade in */
 	opacity: 0.8;
 	transition:opacity 5s;
