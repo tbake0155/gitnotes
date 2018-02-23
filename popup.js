@@ -35,7 +35,7 @@ for(var i = 0;i < lines.length;i++){
             var val = lines[i+3];
             i++;i++;i++;
 
-            var re = new RegExp(, "gi");
+            var re = new RegExp(key, "gi");
             var injected = "<a href=\"https://www.google.com\">" + re + "</a>";
 
             var mod_body = body.replace(re, injected;
