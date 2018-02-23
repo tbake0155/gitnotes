@@ -23,5 +23,6 @@
       "js": ["gitnotes.js"],
       "css" :["gitnotes.css"]
     }
-  ]
+  ],
+  "web_accessible_resources": ["myStyles.css"]
 }
