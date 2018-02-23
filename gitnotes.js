@@ -50,7 +50,7 @@ for(var i = 0;i < lines.length;i++)
 		   if(img == "#") // for images
            {
 			    //ref = "https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678110-sign-info-128.png";
-               injected = "<a class=\"tooltip\" href=\"" + ref + "\">" + key + "<span>" +  val + "</span></a>";
+               injected = "<a class=\"tooltip\" href=\"" + ref + "\">" +key + "<span>" +  val + "</span></a>";
 			   console.log(ref);
            }else{
 			   console.log(ref);
