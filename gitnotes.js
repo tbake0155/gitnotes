@@ -11,7 +11,7 @@ var cut_ending = doc.indexOf(tbody_end);
 var body = doc.substring(cut_beginning, cut_ending);
 
 var fileName = currentURL.substring(currentURL.lastIndexOf('/'));
-fileName = fileName.replace("/",""); // we only the attributes for this file
+fileName = fileName.replace("/",""); // we only want the notes for this file
 
 var attributes = "";
 var request = new XMLHttpRequest();
