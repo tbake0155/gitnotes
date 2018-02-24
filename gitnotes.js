@@ -38,6 +38,7 @@ for(var i = 0;i < lines.length;i++)
             i++;i++;i++;i++;i++;
     
             var exact_key = "\\b" + key + "\\b";
+            var injected = "";
 	       
             if(ref=="#") //developer did not provide media
             {  
