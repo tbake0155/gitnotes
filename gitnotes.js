@@ -3,12 +3,13 @@ var rawURL = currentURL.replace("https://github.com/", "https://raw.githubuserco
 rawURL = rawURL.substring(0, rawURL.indexOf('/blob/'));
 var attributes_file = rawURL + "/master/.gitnotes/notes";
 
-var doc = document.body.innerHTML;
+var original_doc = document.body.innerHTML;
+var modded_doc = original_doc;
 var tbody_beg = "<tbody>"; // the  code exists inside these tbody tags
 var tbody_end = "</tbody>";
-var cut_beginning = doc.indexOf(tbody_beg);
-var cut_ending = doc.indexOf(tbody_end);
-var body = doc.substring(cut_beginning, cut_ending);
+var cut_beginning = modded_doc.indexOf(tbody_beg);
+var cut_ending = modded_doc.indexOf(tbody_end);
+var body = modded_doc.substring(cut_beginning, cut_ending);
 
 var fileName = currentURL.substring(currentURL.lastIndexOf('/'));
 fileName = fileName.replace("/",""); // we only want the notes for this file
@@ -60,8 +61,12 @@ for(var i = 0;i < lines.length;i++)
     }
 }
 
-doc = doc.replace(body, mod_body);
-document.body.innerHTML = doc;
+modded_doc = modded_doc.replace(body, mod_body);
+document.body.innerHTML = modded_doc;
+
+
+
+
 
 
 
