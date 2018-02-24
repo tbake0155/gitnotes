@@ -8,11 +8,11 @@ In order to use the plug-in a user must create a gitnotes folder in the chosen r
 
 ```
 #ENTRY#  
-FILENAME</br>
-CODE</br>
-DOCUMENTATION</br>
-MEDIA</br>
-REFERENCE</br>
+FILENAME
+CODE
+DOCUMENTATION
+MEDIA
+REFERENCE
 ```
 
 Where 
