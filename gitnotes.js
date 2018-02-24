@@ -29,39 +29,33 @@ for(var i = 0;i < lines.length;i++)
 {
     if(lines[i] == "#ENTRY#")
     {
-       if(lines[i+1] == fileName)
-       {
-           var key = lines[i+2]; // code
-           var val = lines[i+3]; // documentation
-	   var img = lines[i+4]; // images
-           var ref = lines[i+5]; // media
-           i++;i++;i++;i++;
+        if(lines[i+1] == fileName)
+        {
+            var key = lines[i+2]; // code
+            var val = lines[i+3]; // documentation
+	        var img = lines[i+4]; // image
+            var ref = lines[i+5]; // media
+            i++;i++;i++;i++;
     
-           var exact_key = "\\b" + key + "\\b";
+            var exact_key = "\\b" + key + "\\b";
 	       
-	   if(ref=="#"){  //developer did not provide media
-			   ref = currentURL;
-		   }
-		   
-		  
-		   
-		   
-		   if(img == "#") // developer did not provide images
-           {
-               injected = "<a class=\"tooltip\" href=\"" + ref + "\">" +key + "<span>" +  val + "</span></a>";
-           }
-	       else{
-	 injected = "<a class=\"tooltip\"  href=\"" + ref + "\">" + key + "<span><img src=" + img + ">" + val + "</span></a>";
+	        if(ref=="#") //developer did not provide media
+            {  
+	            ref = currentURL;
+	        }
+
+		    if(img == "#") // developer did not provide image
+            {
+                injected = "<a class=\"tooltip\" href=\"" + ref + "\">" +key + "<span>" +  val + "</span></a>";
+            }
+	        else // develop did provide image
+            {
+	            injected = "<a class=\"tooltip\"  href=\"" + ref + "\">" + key + "<span><img src=" + img + ">" + val + "</span></a>";
 			   
-		}
-		   
-		   
-		   
-		   
+		    }
+		   		   		 		   
            var re = new RegExp(exact_key, "g");
            mod_body = mod_body.replace(re, injected);
-
-
         }
     }
 }
