@@ -35,7 +35,7 @@ for(var i = 0;i < lines.length;i++)
             var val = lines[i+3]; // documentation
 	        var img = lines[i+4]; // image
             var ref = lines[i+5]; // media
-            i++;i++;i++;i++;
+            i++;i++;i++;i++;i++;
     
             var exact_key = "\\b" + key + "\\b";
 	       
@@ -48,7 +48,7 @@ for(var i = 0;i < lines.length;i++)
             {
                 injected = "<a class=\"tooltip\" href=\"" + ref + "\">" +key + "<span>" +  val + "</span></a>";
             }
-	        else // develop did provide image
+	        else // developer did provide image
             {
 	            injected = "<a class=\"tooltip\"  href=\"" + ref + "\">" + key + "<span><img src=" + img + ">" + val + "</span></a>";
 			   
