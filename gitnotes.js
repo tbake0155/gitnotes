@@ -45,9 +45,10 @@ for(var i = 0;i < lines.length;i++)
             {  
                 ref = currentURL;
             }
-			else{ //if the developer did provide media
-				val = val +"<font color='red'>Note: This tool-tip contains a link to another page.</font>";
-			}
+            else //if the developer did provide media
+            { 
+                val = val +"<font color='red'>Note: This tool-tip contains a link to another page.</font>";
+            }
 
             if(img == "#") // developer did not provide image
             {
