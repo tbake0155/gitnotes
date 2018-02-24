@@ -36,10 +36,10 @@ GitNotes can be installed from source using the standard method for installing a
  2.) Open the Chrome browser and navigate to chrome://extensions
  3.) Click the box next to "Developer mode" so that the box is checked
  4.) Click the "Load unpacked extensions..." button
- 5.) Navigate to the GitNotes source folder and click the "Open" button
- 
- More information: https://developer.chrome.com/extensions/getstarted
+ 5.) Navigate to the GitNotes source folder and click the "Open" button 
  ```
+ [More information](https://developer.chrome.com/extensions/getstarted)
+
 
 ## Contributing
 
