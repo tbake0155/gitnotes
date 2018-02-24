@@ -19,7 +19,7 @@ request.open('GET', attributes_file, false);  // `false` makes the request synch
 request.send(null);
 
 if (request.status === 200) {
-  attributes = request.responseText;  // wait for the file to load 
+    attributes = request.responseText;  // wait for the file to load 
 }
 
 var mod_body = body;
@@ -33,29 +33,28 @@ for(var i = 0;i < lines.length;i++)
         {
             var key = lines[i+2]; // code
             var val = lines[i+3]; // documentation
-	        var img = lines[i+4]; // image
+            var img = lines[i+4]; // image
             var ref = lines[i+5]; // media
             i++;i++;i++;i++;i++;
     
             var exact_key = "\\b" + key + "\\b";
 	       
-	        if(ref=="#") //developer did not provide media
+            if(ref=="#") //developer did not provide media
             {  
 	            ref = currentURL;
 	        }
 
-		    if(img == "#") // developer did not provide image
+            if(img == "#") // developer did not provide image
             {
                 injected = "<a class=\"tooltip\" href=\"" + ref + "\">" +key + "<span>" +  val + "</span></a>";
             }
-	        else // developer did provide image
+            else // developer did provide image
             {
-	            injected = "<a class=\"tooltip\"  href=\"" + ref + "\">" + key + "<span><img src=" + img + ">" + val + "</span></a>";
-			   
-		    }
+                injected = "<a class=\"tooltip\"  href=\"" + ref + "\">" + key + "<span><img src=" + img + ">" + val + "</span></a>";	   
+            }
 		   		   		 		   
-           var re = new RegExp(exact_key, "g");
-           mod_body = mod_body.replace(re, injected);
+            var re = new RegExp(exact_key, "g");
+            mod_body = mod_body.replace(re, injected);
         }
     }
 }
