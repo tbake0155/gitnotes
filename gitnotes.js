@@ -42,7 +42,7 @@ for(var i = 0;i < lines.length;i++)
 	       
             if(ref=="#") //developer did not provide media
             {  
-	            ref = currentURL;
+                ref = currentURL;
             }
 
             if(img == "#") // developer did not provide image
